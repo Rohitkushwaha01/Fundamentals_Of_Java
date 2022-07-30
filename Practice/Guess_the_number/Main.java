@@ -1,3 +1,4 @@
+package Practice.Guess_the_number;
 import java.util.Scanner;
 
 class Game {

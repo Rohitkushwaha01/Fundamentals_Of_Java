@@ -5,6 +5,5 @@ public class Main {
         
         System.out.println(d);
         System.out.println(i);
-        System.out.println(j);
     }    
 }

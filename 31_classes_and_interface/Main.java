@@ -1,4 +1,3 @@
-
 // This is just an example to why use interface
 
 interface Camera{

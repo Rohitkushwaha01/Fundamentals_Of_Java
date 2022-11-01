@@ -29,3 +29,40 @@ public class Main {
         }
     }
 }
+
+
+
+// Self tried.😉😅
+
+// public class Main {
+
+//     public static int linearSearch(int array[], int key) {
+//         for (int i = 0; i < array.length; i++) {
+//             if (array[i] == key)
+//                 return i;
+//         }
+//         return -1;
+//     }
+
+//     public static void main(String[] args) {
+//         int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter the number you want to search linearly: ");
+//         int key = sc.nextInt();
+
+//         // for (int i : arr) {
+//         // System.out.println(i);
+//         // }
+
+//         int linearSearchResult = linearSearch(arr, key);
+
+//         if (linearSearchResult != -1) {
+//             System.out.println("The Element is at index " + linearSearchResult);
+//         } else {
+//             System.out.println("Key " + key + " not found");
+//         }
+
+//     }
+// }

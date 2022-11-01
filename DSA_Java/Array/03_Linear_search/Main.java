@@ -1,5 +1,7 @@
 // What is linear search : It is a searching algorithm, used to find the index of a element in a given array.
 
+// Linear search will only show the very first element on the array. Duplicates number cannot be detected by linear search
+
 import java.util.*;
 
 public class Main {

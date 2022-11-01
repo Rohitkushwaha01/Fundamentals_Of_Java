@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 public class Main {
     public static void main(String[] args) {
@@ -18,3 +19,33 @@ public class Main {
 
     }
 }
+=======
+
+public class Main {
+    public static void main(String[] args) {
+        int rows = 5, k = 0;
+
+        for (int i = 1; i <= rows; ++i, k = 0) {
+            for (int space = 1; space <= rows - i; ++space) {
+                System.out.print("  ");
+            }
+
+            while (k != 2 * i - 1) {
+                System.out.print("* ");
+                ++k;
+            }
+
+            System.out.println();
+        }
+
+    }
+}
+
+//Output: 
+
+//        *
+//      * * *       
+//    * * * * *     
+//  * * * * * * *   
+//* * * * * * * * * 
+>>>>>>> 26c03d1b1199838c2ed6953ba5776fb03accb5f9

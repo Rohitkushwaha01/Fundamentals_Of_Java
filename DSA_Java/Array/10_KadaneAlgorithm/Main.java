@@ -1,4 +1,4 @@
-// Kadane Algorithm
+// Kadane Algorithm: O(N) space complexity
 
 public class Main {
     public static int maximumSubarraySum(int array[], int n){

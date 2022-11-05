@@ -1,4 +1,4 @@
-// Prefix Sum approach : O(N^2)
+// Prefix Sum approach : O(N^2) Space complexity
 
 public class Main {
     public static int largestSubarray(int array[], int n){

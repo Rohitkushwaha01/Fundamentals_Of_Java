@@ -2,29 +2,25 @@
 public class Main {
     public static void insertionSort(int array[]) {
         // array.length = 6;
-        for (int i = 0; i < array.length-1; i++) {
-            if (array[i] > array[i + 1]) {
-                int temp1 = array[i];
-                array[i] = array[i + 1];
-                array[i + 1] = temp1;
-                int key = array[i];
-                System.out.print("[ ");
-        for (int k : array) {
-            System.out.print(k + ", ");
-        }
-        System.out.println("]");
-                for (int j = 0; j < i; j++) {
-                    if(key < array[i-j]){
-                        int temp2 = array[i-j];
-                        array[i-j] = key;
-                        array[i] = temp2;
-                        System.out.println(array[i-j]);
-                        System.out.println(array[i]);
-                    }
-                }
+        for (int i = 1; i < array.length; i++) {
+            int current = array[i];
+            int prev = i - 1;
+            while (prev >=0 && array[prev] > current) {
+                array[prev + 1] = array[prev];
+                prev = prev - 1;
             }
+            array[prev + 1] = current;
         }
     }
+
+    // {5,4,3,2}
+    // i = 1 i<4
+    // current = 4;
+    // prev = 0;
+    // 0=0 && 5 > 4 ---> true
+    // ar[1] = ar[0] = 5;
+    // prev = -1;
+    // ar[0] = 4
 
     public static void main(String[] args) {
         int arr[] = { 5, 4, 3, 2 };

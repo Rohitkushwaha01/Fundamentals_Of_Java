@@ -3,7 +3,6 @@
 public class Main {
     public static void selectionSort(int a[]){
         for (int i = 0; i < a.length-1; i++) {
-            int current = a[i];
             int min_position = i;
             // find out minimum element
             for (int j = i; j < a.length; j++) {

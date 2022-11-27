@@ -1,5 +1,3 @@
-
-
 public class Main {
     static void countingSort(int a[]){
         //Largest Element

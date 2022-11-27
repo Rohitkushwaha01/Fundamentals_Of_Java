@@ -7,6 +7,7 @@ public class Main {
 
 		while (start <= end) {
 			int mid = (start + end) / 2;
+			System.out.println(mid);
 			if (array[mid] == key) {
 				return mid;
 			} else if (array[mid] > key) {

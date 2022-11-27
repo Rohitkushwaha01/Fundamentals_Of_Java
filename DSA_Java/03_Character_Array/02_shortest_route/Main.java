@@ -43,8 +43,16 @@ public class Main {
                 System.out.print("N");
             }
         }
+        else{
+            while(x++ < 0){
+                System.out.println("W");
+            }
+            while(y++ < 0){
+                System.out.println("S");
+            }
+        }
 
-        System.out.println(x + " " + y);
+        // System.out.println(x + " " + y);
 
     }
 }

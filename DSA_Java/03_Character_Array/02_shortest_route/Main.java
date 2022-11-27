@@ -45,14 +45,12 @@ public class Main {
         }
         else{
             while(x++ < 0){
-                System.out.println("W");
+                System.out.print("W");
             }
             while(y++ < 0){
-                System.out.println("S");
+                System.out.print("S");
             }
         }
-
-        // System.out.println(x + " " + y);
 
     }
 }

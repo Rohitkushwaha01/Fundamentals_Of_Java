@@ -11,9 +11,28 @@ public class Main {
         boolean  result = (reverseString.toLowerCase().equals(orignalString.toLowerCase())) ? true: false;
         return result;
     }
+    // New Palindrome method
+    public static boolean newPalindrome(String str){
+        int l = 0;
+        int h = str.length() - 1;
+        
+        // If users input capital letters. converted the whole string to lowercase.
+        str = str.toLowerCase();
+        while (h > l) {
+            System.out.println(l);
+            System.out.println(h);
+            if(str.charAt(l++) != str.charAt(h--)){
+                System.out.println(l);
+                System.out.println(h);
+                return false;
+            }
+        }
+        return true;
+
+    }
     public static void main(String[] args) {
-        System.out.println(palindrome("abba"));
-        System.out.println(palindrome("aba"));
-        System.out.println(palindrome("Malayalam"));
+        System.out.println(newPalindrome("abba"));
+        System.out.println(newPalindrome("aba"));
+        System.out.println(newPalindrome("Malayalam"));
     }
 }

@@ -3,8 +3,13 @@ public class Main {
         A = A.toLowerCase();
         B = B.toLowerCase();
 
+        if(A.length() > B.length()){
+            return 0;
+        }
+
         int len = (A.length() > B.length())?A.length():B.length();
         int matched = 0;
+
         for (int i = 0; i < A.length(); i++) {
             char word = A.charAt(i);
             for (int j = 0; j < B.length(); j++) {
@@ -21,7 +26,7 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        int value = permutation("abcd", "dacb");
+        int value = permutation("abcdx", "dacb");
         if(value == 1){
             System.out.println("YES");
         }

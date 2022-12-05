@@ -19,11 +19,7 @@ public class Main {
         // If users input capital letters. converted the whole string to lowercase.
         str = str.toLowerCase();
         while (h > l) {
-            System.out.println(l);
-            System.out.println(h);
             if(str.charAt(l++) != str.charAt(h--)){
-                System.out.println(l);
-                System.out.println(h);
                 return false;
             }
         }

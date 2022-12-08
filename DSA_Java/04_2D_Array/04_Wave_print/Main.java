@@ -1,4 +1,4 @@
-// Write a function that takes in n x m 2D array, and prints the all array elements in a spiral order. Start from top left corner goes to right, proceeds in a spiral pattern until every element is visited.
+// Write a function that takes in n x m 2D array, and prints the all array elements in a wave.
 
 // input
 // 1 2 3 4 
@@ -7,7 +7,7 @@
 // 13 14 15 16
 
 // output: 
-// 1 2 3 4 8 12 16 15 14 13 9 5 6 6 11 10
+// 4 8 12 16 15 11 7 3 2 6 10 14 13 9 5 1
 
 public class Main {
     public static void wave(int arr[][], int row, int col){

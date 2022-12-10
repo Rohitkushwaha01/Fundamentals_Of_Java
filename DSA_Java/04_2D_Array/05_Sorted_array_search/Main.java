@@ -32,7 +32,7 @@ public class Main {
                 { 27, 29, 37, 48 },
                 { 32, 33, 39, 50 }
         };
-        int key = 48;
+        int key = 39;
         int result = staircaseSearch(arr, 4, 4, key);
 
         if(result == 1){

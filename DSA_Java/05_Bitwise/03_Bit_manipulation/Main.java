@@ -6,11 +6,18 @@ public class Main {
         return (n & mask) > 0 ? 1 : 0;
     }
 
+    public static int setithBit(int n, int i){
+        int mask = (1 << i);
+        n = (n|mask);
+        return n;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = 10;
         int position = sc.nextInt();
-        System.out.println(getIthBit(number, position));
-        
+        // System.out.println(getIthBit(number, position));
+        number = setithBit(number, position);
+        System.out.println(number);
     }
 }

@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
     public static int romanToInt(String s) {
         char romanNotation[] = { 'I', 'V', 'X', 'L', 'C', 'D', 'M'};
-        int numberNotation[] = {1, 5, 10, 50, 100, 500, 1000, 4, 9, 40, 90, 400, 900};
+        int numberNotation[] = {1, 5, 10, 50, 100, 500, 1000};
         int sum = 0;
         
         for (int i = 0; i < s.length(); i++) {

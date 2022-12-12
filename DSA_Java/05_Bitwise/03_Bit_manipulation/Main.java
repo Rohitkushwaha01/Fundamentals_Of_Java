@@ -18,13 +18,21 @@ public class Main {
         return n;
     }
 
+    public static int updateithBit(int n, int i, int v){
+        clearithBit(n, i);
+        int mask = (v << i);
+        n =  (n | mask);
+        return n;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = 10;
         int position = sc.nextInt();
         // System.out.println(getIthBit(number, position));
         // number = setithBit(number, position);
-        number = clearithBit(number, position);
+        // number = clearithBit(number, position);
+        number = updateithBit(number, position, 1);
         System.out.println(number);
     }
 }

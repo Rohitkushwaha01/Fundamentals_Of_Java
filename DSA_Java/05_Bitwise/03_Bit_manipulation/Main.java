@@ -31,15 +31,25 @@ public class Main {
         return n;
     }
 
+    public static int clearRangeOfithBit(int n, int i, int j){
+        int a = ((~0)<< j+1);
+        int b = (1 << i) - 1;
+        int mask = a|b;
+        n =  (n & mask);
+        return n;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = 11;
-        int position = sc.nextInt();
+        int i = sc.nextInt();
+        int j = sc.nextInt();
         // System.out.println(getIthBit(number, position));
         // number = setithBit(number, position);
         // number = clearithBit(number, position);
         // number = updateithBit(number, position, 1);
-        number = clearLastithBit(number, position);
+        // number = clearLastithBit(number, position);
+        number = clearRangeOfithBit(number, i, j);
         System.out.println(number);
     }
 }

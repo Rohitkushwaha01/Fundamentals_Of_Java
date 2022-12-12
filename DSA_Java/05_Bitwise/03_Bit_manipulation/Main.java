@@ -25,14 +25,21 @@ public class Main {
         return n;
     }
 
+    public static int clearLastithBit(int n, int i){
+        int mask = (-1 << i);
+        n =  (n & mask);
+        return n;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int number = 10;
+        int number = 11;
         int position = sc.nextInt();
         // System.out.println(getIthBit(number, position));
         // number = setithBit(number, position);
         // number = clearithBit(number, position);
-        number = updateithBit(number, position, 1);
+        // number = updateithBit(number, position, 1);
+        number = clearLastithBit(number, position);
         System.out.println(number);
     }
 }

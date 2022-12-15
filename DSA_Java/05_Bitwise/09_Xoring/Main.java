@@ -5,7 +5,6 @@ public class Main{
         int res=0;
         for(int x : v){
             res ^= x;
-            System.out.println(res);
         }
         return res;
     }
@@ -16,7 +15,7 @@ public class Main{
         arr.add(2);
         arr.add(3);
         arr.add(1);
-        arr.add(4);
+        arr.add(7);
         arr.add(2);
         arr.add(3);
 

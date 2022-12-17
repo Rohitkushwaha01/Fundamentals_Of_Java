@@ -1,8 +1,4 @@
 public class Main {
-    public static boolean compare(int a, int b) {
-        return a > b;
-    }
-
     public static void bubbleSort(int a[], int n) {
         if (n == 1) {
             return;

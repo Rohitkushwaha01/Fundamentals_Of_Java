@@ -1,6 +1,3 @@
-import java.util.*;
-
-
 public class Main {
     public static int factorial(int x) {
         if(x == 0){

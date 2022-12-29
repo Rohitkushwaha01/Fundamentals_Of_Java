@@ -1,1 +1,1 @@
-# Fundamentals_Of_Java
+# Fundamentals of Java

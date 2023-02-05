@@ -19,6 +19,13 @@ public class Main {
         arr[idx1] = arr[idx1] - arr[idx2];
     }
 
+    // Swapping without using one extra variable(* & /)
+    public static void swapWithmutiplyAndDivide(int arr[], int idx1, int idx2) {
+        arr[idx1] = arr[idx1] * arr[idx2];
+        arr[idx2] = arr[idx1] / arr[idx2];
+        arr[idx1] = arr[idx1] / arr[idx2];
+    }
+
     public static void main(String[] args) {
         int[] arr = {10, 45, 32, 53, 90};
         int index1 = 2;
@@ -26,6 +33,8 @@ public class Main {
         swapWithVariable(arr, index1, index2);
         System.out.println(Arrays.toString(arr));
         swapWithoutVariable(arr, index1, index2);
+        System.out.println(Arrays.toString(arr));
+        swapWithmutiplyAndDivide(arr, index1, index2);
         System.out.println(Arrays.toString(arr));
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // Print the below pattern 
 // output : 1
 //          1 2
@@ -7,9 +9,12 @@
 
 public class Main {
     public static void main(String[] args){
-        for(int i = 0; i <= 5; i++){
-            for(int j = 1; j <= i; j++){
-                System.out.print(j);
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter number of rows: ");
+        int n = in.nextInt();
+        for(int row = 1; row <= n; row++){
+            for(int col = 1; col <= row; col++){
+                System.out.print(col + " ");
             }
             System.out.println();
         }

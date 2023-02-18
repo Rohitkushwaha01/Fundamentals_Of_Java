@@ -23,16 +23,6 @@ public class LL {
         size++;
     }
 
-    public int deleteFirst(){
-        int val = head.value;
-        head = head.next;
-        if(head == null){
-            tail = null;
-        }
-        size--;
-        return val;
-    }
-
     // insertAtLast method Insert element at the last
     public void insertAtLast(int value) {
         if (tail == null) {
@@ -45,18 +35,6 @@ public class LL {
         tail = node;
         size++;
     }
-
-    // public void deleteLast(){
-    //     int val = tail.value;
-    //     Node temp = head;
-
-    //     for (int i = 0; i < size - 1; i++) {
-    //         
-    //     }
-
-    //     int val;
-
-    // }
 
     // insert at given index
     public void insert(int value, int index) {
@@ -85,6 +63,57 @@ public class LL {
     public int size() {
         return this.size;
     }
+
+    // DeleteFirst: it will delete an element at the first index
+    public int deleteFirst() {
+        int val = head.value;
+        head = head.next;
+        if (head == null) {
+            tail = null;
+        }
+        size--;
+        return val;
+    }
+
+    // DeleteLast: it will delete an element at the Last index
+    public int deleteLast() {
+        if(size <= 1){
+            return deleteFirst();
+        }
+
+        Node node = get(size - 2);
+        int val = tail.value;
+        tail = node;
+        tail.next = null;
+        size--;
+        return val;
+    }
+
+    // DeleteLast: it will delete an element at the index
+    public int delete(int index) {
+        if(index == 0){
+            return deleteFirst();
+        }
+        if(index == size){
+            return deleteLast();
+        }
+
+        Node prev = get(index - 1);
+        int val = prev.next.value;
+        prev.next = prev.next.next;
+        size--;
+        return val;
+    }
+
+    // get: this function
+    public Node get(int index) {
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
 
     // display method prints all the values of LL
     public void display() {

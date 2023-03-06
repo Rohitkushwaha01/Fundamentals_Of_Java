@@ -13,7 +13,19 @@ public class Main {
         sum = sum + i;
         printSum(i+1, n, sum);
     }
-    public static void main(String[] args) {
-        printSum(1, 10, 0);
+
+    public static int sum(int n){
+        if(n==0){
+            return 0;
+        }
+        int sum = n;
+        return sum + sum(n-1);
     }
+    
+    public static void main(String[] args) {
+        printSum(1, 20, 0);
+        System.out.println(sum(20));
+    }
+
+
 }

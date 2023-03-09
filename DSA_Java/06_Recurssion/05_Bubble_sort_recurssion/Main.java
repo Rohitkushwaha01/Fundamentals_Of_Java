@@ -14,11 +14,27 @@ public class Main {
         bubbleSort(a, n - 1);
     }
 
+    public static void bubbleSort2(int a[], int r, int c){
+        if(r == 0) return;
+        if(c<r){
+            if(a[c] > a[c+1]){
+                int temp = a[c];
+                a[c] = a[c + 1];
+                a[c + 1] = temp;
+            }
+            bubbleSort2(a, r, c+1);
+        }
+        else{
+            bubbleSort2(a, r-1, 0);
+        }
+    }
+
     public static void main(String[] args) {
         int[] arr = { -2, 3, 4, -1, 5, -12, 6, 1, 3 };
-        int n = arr.length;
+        int n = arr.length - 1;
 
-        bubbleSort(arr, n);
+        // bubbleSort(arr, n);
+        bubbleSort2(arr, n, 0);
 
         for (int j : arr) {
             System.out.print(j + " ");

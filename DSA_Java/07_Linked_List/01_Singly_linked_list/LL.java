@@ -59,6 +59,22 @@ public class LL {
         size++;
     }
 
+    public void insertRecursion(int val, int index){
+        head = insertRecu(val, index, head);
+    }
+
+    private Node insertRecu(int val, int index, Node node){
+        if(index == 0){
+            Node newNode = new Node(val, node);
+            size++;
+            return newNode;
+        }
+
+        node.next = insertRecu(val, index-1, node.next);
+
+        return node;
+    }
+
     // size method returns the size of LL
     public int size() {
         return this.size;
@@ -125,8 +141,73 @@ public class LL {
         System.out.print("end");
     }
 
+    public void duplicates(){
+        Node node = head;
+
+        while(node.next != null){
+            if(node.value == node.next.value){
+                node.next = node.next.next;
+                size--;
+            }else{
+                node = node.next;
+            }
+        }
+        tail = node;
+        tail.next = null;
+    }
+
+    public LL merge(Node list1, Node list2){
+        Node f = list1.head;
+        Node s = list2.head;
+
+        LL ans = new LL();
+
+        while(f.next != null && s.next != null){
+            if(f.value < s.value){
+                ans.insertAtLast(f.value);
+                f = f.next;
+            }else{
+                ans.insertAtLast(s.value);
+                s = s.next;
+            }
+        }
+
+        while(f != null){
+            ans.insertAtLast(f.value);
+            f = f.next;
+        }
+
+        while(s != null){
+            ans.insertAtLast(s.value);
+            s = s.next;
+        }
+
+        return ans;
+
+        // Leetcode solution
+        // ListNode head = new ListNode();
+        // ListNode tail = head;
+
+        // while(list1 != null && list2 != null){
+        //     if(list1.val < list2.val){
+        //         tail.next = list1;
+        //         list1 = list1.next;
+        //         tail = tail.next;
+        //     }else{
+        //         tail.next = list2;
+        //         list2 = list2.next;
+        //         tail = tail.next;
+        //     }
+        // }
+        // tail.next = (list1 != null) ? list1 : list2;
+        // return head.next;
+
+
+    }
+
     // Node class: structure of node.
     private class Node {
+        public LL.Node head;
         private int value;
         private Node next;
 

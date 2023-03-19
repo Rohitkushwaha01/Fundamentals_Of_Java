@@ -46,6 +46,7 @@ public class Main{
         mergesort(arr,mid+1,e);
         merge(arr,s,e);
     }
+    
     public static void main(String[] args) {
         int[] arr = new int[]{10,5,2,0,7,6,4};
 

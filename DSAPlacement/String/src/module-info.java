@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author rohit
+ *
+ */
+module String {
+}
